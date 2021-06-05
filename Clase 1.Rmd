@@ -54,8 +54,36 @@ mean(poker_start)
 selection_vector = poker_vector<0
 selection_vector
 ```
-
+Matrices
 ```{r}
 matrix(1:9 , byrow = TRUE, nrow = 3)
 ```
+
+```{r}
+new_hope = c(460.998, 314.4)
+empire_strike = c(2980.475, 247.900)
+return_jedi = c(309.306, 165.8)
+
+box_office = c(new_hope, empire_strike, return_jedi)
+box_office
+
+stars_wars_matrix = matrix(box_office, byrow = TRUE, nrow = 3)
+
+
+region = c("US", "NON-US")
+titles = c("A new hope", "The empire strikes back", "Return of jedi")
+
+colnames(stars_wars_matrix) = region
+rownames(stars_wars_matrix) = titles 
+stars_wars_matrix
+```
+```{r}
+worldwide_vector = rowSums(stars_wars_matrix)
+worldwide_vector
+
+all_wars_variable = cbind(stars_wars_matrix, worldwide_vector)
+all_wars_variable
+
+```
+
 

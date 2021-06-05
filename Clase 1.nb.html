@@ -340,6 +340,7 @@ selection_vector</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Matrices</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0cml4KDE6OSAsIGJ5cm93ID0gVFJVRSwgbnJvdyA9IDMpXG5gYGAifQ== -->
@@ -354,8 +355,60 @@ selection_vector</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmV3X2hvcGUgPSBjKDQ2MC45OTgsIDMxNC40KVxuZW1waXJlX3N0cmlrZSA9IGMoMjk4MC40NzUsIDI0Ny45MDApXG5yZXR1cm5famVkaSA9IGMoMzA5LjMwNiwgMTY1LjgpXG5cbmJveF9vZmZpY2UgPSBjKG5ld19ob3BlLCBlbXBpcmVfc3RyaWtlLCByZXR1cm5famVkaSlcbmJveF9vZmZpY2VcbmBgYCJ9 -->
+<pre class="r"><code>new_hope = c(460.998, 314.4)
+empire_strike = c(2980.475, 247.900)
+return_jedi = c(309.306, 165.8)
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCjI1JSUzDQo1KzYqOC80ICMgTWl4dGFzDQoNCmBgYA0KDQpgYGB7cn0NCnggPSAxMA0KeiA9IC0xNQ0KeSA9IHpeMit4XjIgDQp5DQpgYGANCg0KYGBge3J9DQpteV9jaGFyYWN0ZXIgPSAidW5pdmVyc2UiDQpteV9sb2dpY2FsID0gRkFMU0UNCg0KbXlfY2hhcmFjdGVyDQpteV9sb2dpY2FsDQoNCmNsYXNzKG15X2xvZ2ljYWwpDQpgYGANCmBgYHtyfQ0KbnVtZXJpY192ZWN0b3IgPSBjKDIsLTI1LDUwKQ0KdmVjdG9yX2NhcmFjdGVyID0gYygidW5vIiwgImRvcyIsICJ0cmVzIikNCnZlY3Rvcl9ib29sZWFubyA9IGMoVFJVRSwgRkFMU0UsIFRSVUUpDQoNCm51bWVyaWNfdmVjdG9yDQp2ZWN0b3JfY2FyYWN0ZXINCnZlY3Rvcl9ib29sZWFubw0KYGBgDQpgYGB7cn0NCnBva2VyX3ZlY3RvciA9IGMoMTQwLC00OCwyMywxMC41KQ0KbmFtZXMocG9rZXJfdmVjdG9yKSA9IGMoInVubyIsICJkb3MiLCAidHJlcyIsICJjdWF0cm8iKQ0KcG9rZXJfdmVjdG9yDQpgYGANCg0KYGBge3J9DQp0b3RhbF92ZWN0b3IgPSBzdW0ocG9rZXJfdmVjdG9yKSANCnRvdGFsX3ZlY3Rvcg0KDQpwb2tlcl92ZWN0b3JbM10NCnBva2VyX3ZlY3RvcltjKDIsMSldDQoNCnBva2VyX3N0YXJ0ID0gcG9rZXJfdmVjdG9yW2MoInVubyIsICJkb3MiLCAiY3VhdHJvIildDQpwb2tlcl9zdGFydA0KbWVhbihwb2tlcl9zdGFydCkNCg0Kc2VsZWN0aW9uX3ZlY3RvciA9IHBva2VyX3ZlY3RvcjwwDQpzZWxlY3Rpb25fdmVjdG9yDQpgYGANCg0KYGBge3J9DQptYXRyaXgoMTo5ICwgYnlyb3cgPSBUUlVFLCBucm93ID0gMykNCmBgYA0KDQo=</div>
+box_office = c(new_hope, empire_strike, return_jedi)
+box_office</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICA0NjAuOTk4ICAzMTQuNDAwIDI5ODAuNDc1ICAyNDcuOTAwICAzMDkuMzA2ICAxNjUuODAwXG4ifQ== -->
+<pre><code>[1]  460.998  314.400 2980.475  247.900  309.306  165.800</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnNfd2Fyc19tYXRyaXggPSBtYXRyaXgoYm94X29mZmljZSwgYnlyb3cgPSBUUlVFLCBucm93ID0gMylcblxuXG5yZWdpb24gPSBjKFwiVVNcIiwgXCJOT04tVVNcIilcbnRpdGxlcyA9IGMoXCJBIG5ldyBob3BlXCIsIFwiVGhlIGVtcGlyZSBzdHJpa2VzIGJhY2tcIiwgXCJSZXR1cm4gb2YgamVkaVwiKVxuXG5jb2xuYW1lcyhzdGFyc193YXJzX21hdHJpeCkgPSByZWdpb25cbnJvd25hbWVzKHN0YXJzX3dhcnNfbWF0cml4KSA9IHRpdGxlcyBcbnN0YXJzX3dhcnNfbWF0cml4XG5gYGAifQ== -->
+<pre class="r"><code>stars_wars_matrix = matrix(box_office, byrow = TRUE, nrow = 3)
+
+
+region = c(&quot;US&quot;, &quot;NON-US&quot;)
+titles = c(&quot;A new hope&quot;, &quot;The empire strikes back&quot;, &quot;Return of jedi&quot;)
+
+colnames(stars_wars_matrix) = region
+rownames(stars_wars_matrix) = titles 
+stars_wars_matrix</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVVMgTk9OLVVTXG5BIG5ldyBob3BlICAgICAgICAgICAgICAgNDYwLjk5OCAgMzE0LjRcblRoZSBlbXBpcmUgc3RyaWtlcyBiYWNrIDI5ODAuNDc1ICAyNDcuOVxuUmV0dXJuIG9mIGplZGkgICAgICAgICAgIDMwOS4zMDYgIDE2NS44XG4ifQ== -->
+<pre><code>                              US NON-US
+A new hope               460.998  314.4
+The empire strikes back 2980.475  247.9
+Return of jedi           309.306  165.8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud29ybGR3aWRlX3ZlY3RvciA9IHJvd1N1bXMoc3RhcnNfd2Fyc19tYXRyaXgpXG53b3JsZHdpZGVfdmVjdG9yXG5gYGAifQ== -->
+<pre class="r"><code>worldwide_vector = rowSums(stars_wars_matrix)
+worldwide_vector</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIEEgbmV3IGhvcGUgVGhlIGVtcGlyZSBzdHJpa2VzIGJhY2sgICAgICAgICAgUmV0dXJuIG9mIGplZGkgXG4gICAgICAgICAgICAgICAgNzc1LjM5OCAgICAgICAgICAgICAgICAzMjI4LjM3NSAgICAgICAgICAgICAgICAgNDc1LjEwNiBcbiJ9 -->
+<pre><code>             A new hope The empire strikes back          Return of jedi 
+                775.398                3228.375                 475.106 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWxsX3dhcnNfdmFyaWFibGUgPSBjYmluZChzdGFyc193YXJzX21hdHJpeCwgd29ybGR3aWRlX3ZlY3RvcilcbmFsbF93YXJzX3ZhcmlhYmxlXG5gYGAifQ== -->
+<pre class="r"><code>all_wars_variable = cbind(stars_wars_matrix, worldwide_vector)
+all_wars_variable</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVVMgTk9OLVVTIHdvcmxkd2lkZV92ZWN0b3JcbkEgbmV3IGhvcGUgICAgICAgICAgICAgICA0NjAuOTk4ICAzMTQuNCAgICAgICAgICA3NzUuMzk4XG5UaGUgZW1waXJlIHN0cmlrZXMgYmFjayAyOTgwLjQ3NSAgMjQ3LjkgICAgICAgICAzMjI4LjM3NVxuUmV0dXJuIG9mIGplZGkgICAgICAgICAgIDMwOS4zMDYgIDE2NS44ICAgICAgICAgIDQ3NS4xMDZcbiJ9 -->
+<pre><code>                              US NON-US worldwide_vector
+A new hope               460.998  314.4          775.398
+The empire strikes back 2980.475  247.9         3228.375
+Return of jedi           309.306  165.8          475.106</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCjI1JSUzDQo1KzYqOC80ICMgTWl4dGFzDQoNCmBgYA0KDQpgYGB7cn0NCnggPSAxMA0KeiA9IC0xNQ0KeSA9IHpeMit4XjIgDQp5DQpgYGANCg0KYGBge3J9DQpteV9jaGFyYWN0ZXIgPSAidW5pdmVyc2UiDQpteV9sb2dpY2FsID0gRkFMU0UNCg0KbXlfY2hhcmFjdGVyDQpteV9sb2dpY2FsDQoNCmNsYXNzKG15X2xvZ2ljYWwpDQpgYGANCmBgYHtyfQ0KbnVtZXJpY192ZWN0b3IgPSBjKDIsLTI1LDUwKQ0KdmVjdG9yX2NhcmFjdGVyID0gYygidW5vIiwgImRvcyIsICJ0cmVzIikNCnZlY3Rvcl9ib29sZWFubyA9IGMoVFJVRSwgRkFMU0UsIFRSVUUpDQoNCm51bWVyaWNfdmVjdG9yDQp2ZWN0b3JfY2FyYWN0ZXINCnZlY3Rvcl9ib29sZWFubw0KYGBgDQpgYGB7cn0NCnBva2VyX3ZlY3RvciA9IGMoMTQwLC00OCwyMywxMC41KQ0KbmFtZXMocG9rZXJfdmVjdG9yKSA9IGMoInVubyIsICJkb3MiLCAidHJlcyIsICJjdWF0cm8iKQ0KcG9rZXJfdmVjdG9yDQpgYGANCg0KYGBge3J9DQp0b3RhbF92ZWN0b3IgPSBzdW0ocG9rZXJfdmVjdG9yKSANCnRvdGFsX3ZlY3Rvcg0KDQpwb2tlcl92ZWN0b3JbM10NCnBva2VyX3ZlY3RvcltjKDIsMSldDQoNCnBva2VyX3N0YXJ0ID0gcG9rZXJfdmVjdG9yW2MoInVubyIsICJkb3MiLCAiY3VhdHJvIildDQpwb2tlcl9zdGFydA0KbWVhbihwb2tlcl9zdGFydCkNCg0Kc2VsZWN0aW9uX3ZlY3RvciA9IHBva2VyX3ZlY3RvcjwwDQpzZWxlY3Rpb25fdmVjdG9yDQpgYGANCk1hdHJpY2VzDQpgYGB7cn0NCm1hdHJpeCgxOjkgLCBieXJvdyA9IFRSVUUsIG5yb3cgPSAzKQ0KYGBgDQoNCmBgYHtyfQ0KbmV3X2hvcGUgPSBjKDQ2MC45OTgsIDMxNC40KQ0KZW1waXJlX3N0cmlrZSA9IGMoMjk4MC40NzUsIDI0Ny45MDApDQpyZXR1cm5famVkaSA9IGMoMzA5LjMwNiwgMTY1LjgpDQoNCmJveF9vZmZpY2UgPSBjKG5ld19ob3BlLCBlbXBpcmVfc3RyaWtlLCByZXR1cm5famVkaSkNCmJveF9vZmZpY2UNCg0Kc3RhcnNfd2Fyc19tYXRyaXggPSBtYXRyaXgoYm94X29mZmljZSwgYnlyb3cgPSBUUlVFLCBucm93ID0gMykNCg0KDQpyZWdpb24gPSBjKCJVUyIsICJOT04tVVMiKQ0KdGl0bGVzID0gYygiQSBuZXcgaG9wZSIsICJUaGUgZW1waXJlIHN0cmlrZXMgYmFjayIsICJSZXR1cm4gb2YgamVkaSIpDQoNCmNvbG5hbWVzKHN0YXJzX3dhcnNfbWF0cml4KSA9IHJlZ2lvbg0Kcm93bmFtZXMoc3RhcnNfd2Fyc19tYXRyaXgpID0gdGl0bGVzIA0Kc3RhcnNfd2Fyc19tYXRyaXgNCmBgYA0KYGBge3J9DQp3b3JsZHdpZGVfdmVjdG9yID0gcm93U3VtcyhzdGFyc193YXJzX21hdHJpeCkNCndvcmxkd2lkZV92ZWN0b3INCg0KYWxsX3dhcnNfdmFyaWFibGUgPSBjYmluZChzdGFyc193YXJzX21hdHJpeCwgd29ybGR3aWRlX3ZlY3RvcikNCmFsbF93YXJzX3ZhcmlhYmxlDQoNCmBgYA0KDQoNCg==</div>
 
 
 
