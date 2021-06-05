@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+25%%3
+5+6*8/4 # Mixtas
+
+```
+
+```{r}
+x = 10
+z = -15
+y = z^2+x^2 
+y
+```
+
+```{r}
+my_character = "universe"
+my_logical = FALSE
+
+my_character
+my_logical
+
+class(my_logical)
+```
+```{r}
+numeric_vector = c(2,-25,50)
+vector_caracter = c("uno", "dos", "tres")
+vector_booleano = c(TRUE, FALSE, TRUE)
+
+numeric_vector
+vector_caracter
+vector_booleano
+```
+```{r}
+poker_vector = c(140,-48,23,10.5)
+names(poker_vector) = c("uno", "dos", "tres", "cuatro")
+poker_vector
+```
+
+```{r}
+total_vector = sum(poker_vector) 
+total_vector
+
+poker_vector[3]
+poker_vector[c(2,1)]
+
+poker_start = poker_vector[c("uno", "dos", "cuatro")]
+poker_start
+mean(poker_start)
+
+selection_vector = poker_vector<0
+selection_vector
+```
+
+```{r}
+matrix(1:9 , byrow = TRUE, nrow = 3)
+```
+
