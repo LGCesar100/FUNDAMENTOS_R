@@ -84,6 +84,70 @@ worldwide_vector
 all_wars_variable = cbind(stars_wars_matrix, worldwide_vector)
 all_wars_variable
 
+worldwide_cols = colSums(all_wars_variable)
+worldwide_cols
+
+all_wars_variable = rbind(all_wars_variable, worldwide_cols)
+all_wars_variable
 ```
 
+Elementos de una matriz
+
+```{r}
+non_us_all = all_wars_variable[1:3,2]
+non_us_all
+
+mean(non_us_all)
+
+us_all = all_wars_variable[1:3,1]
+us_all = us_all*0.12
+us_all
+
+```
+
+FACTORES
+
+```{r}
+sex_vector= c("male", "female", "female", "male", "female")
+factor_sex_vector = factor(sex_vector)
+factor_sex_vector
+
+temperature_vector = c("high", "low", "high", "medium")
+factor_temperature = factor(temperature_vector, order = TRUE, levels = c("low", "medium", "high"))
+factor_temperature
+
+
+survey_vector = c("M", "F", "F", "M", "M")
+factor_survey_vector = factor(survey_vector)
+
+factor_survey_vector
+
+levels(factor_survey_vector) = c("Femele", "Male")
+factor_survey_vector
+```
+Factor sumarizado
+
+```{r}
+summary(survey_vector) 
+summary(factor_survey_vector)
+
+male = factor_survey_vector[1]
+male 
+
+female = factor_survey_vector[2]
+female
+
+speed_vector = c("medium", "slow", "slow", "medium", "fast")
+factor_speed_vector = factor(speed_vector, ordered = TRUE, levels = c("slow", "medium", "fast"))
+factor_speed_vector
+
+da2 = factor_speed_vector[2]
+da3 = factor_speed_vector[1]
+
+da2
+da3
+
+da2 < da3
+
+```
 
