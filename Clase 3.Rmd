@@ -1,0 +1,107 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+
+Intermediate R
+```{r}
+3 == (2 + 1)
+"intermediate" != "r"
+TRUE != FALSE
+"Rchitect" != "rchitect"
+
+```
+Greater and less than
+```{r}
+-6*30+2 >= -9
+"raining" <= "table"
+
+TRUE > FALSE
+```
+Compare vectors
+
+```{r}
+lindkedin = c(16,9,13,5,2,17,14)
+facebook = c(17,7,5,23,4,34,3)
+
+lindkedin > 20
+facebook <=10
+lindkedin > facebook #compara cada elemento de linkedin con los de facekook 
+
+views = matrix(c(lindkedin,facebook), nrow=2, byrow = TRUE)
+views
+
+views == 13
+views <= 14
+```
+Operators logicals
+```{r}
+lindkedin <=10  & facebook ==14
+views > 11 &views <=14
+```
+
+The if statement 
+
+```{r}
+medium = "linkedin"
+num_views = 14 
+
+if(medium == "linkedin"){
+  print("Son iguales")
+} else{
+  print("No son iguales")
+} 
+
+if(num_views >15){
+  print("You're popular!")
+} else {
+  print("Try to be more visible!")
+}
+```
+
+Customize further: else if
+
+```{r}
+if(medium == "linkedin"){
+  print("Son iguales")
+} elseif(medium = "Facebook"){
+  print("Es igual a Facebook")
+}
+```
+Else if 2.0
+
+```{r}
+number = 110
+result = ""
+
+if(number <10){
+  if(number < 5){
+    result = "Xtra small"
+  }
+  else{
+    result = "small"
+  }
+  
+}else if(number <100) {
+  result = "Medium"
+} else {
+  result = "Large"
+}
+print(result)
+```
+
