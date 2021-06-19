@@ -1,0 +1,135 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+Funciones en R
+
+Estructura de una función: 
+
+nombre_de_la_funcion = funtion(Argumento1, Argumento2, Argumento3 ..){
+cuerpo de la función
+resultado
+}
+
+Ejemplos 
+```{r}
+#Ejemplo 1
+#La siguiente funcion calcula la multiplicacion entre dos numeros:
+multiplicacion = function(x,y){
+    x * y
+}
+
+multiplicacion(15.5, 46.56)
+```
+
+```{r}
+#Ejemplo 2
+#La siguiente funcion determina el valor de la hipotenusa de un triangulo rectangulo:
+hipotenusa = function(cateto_adyacente, cateto_opuesto){
+  h = round(sqrt(cateto_adyacente^2+cateto_opuesto^2),2)
+  paste("La hipotenusa de triangulo rectangulo es", h, "si sus catetos adyecente y opuesto son", cateto_adyacente, cateto_adyacente,"respectivamente")
+}
+
+hipotenusa(45.78,89.13)
+```
+```{r}
+#Ejemplo 3
+#Esta funcion convierte un vector en unitario:
+vector_unitario = function(x,y,z){
+  magnitud = sqrt(x^2+y^2+z^2)
+  unitario = c(x/magnitud, y/magnitud, z/magnitud)
+  round(unitario,2)
+}
+
+vector_unitario(-3.56,10.78,25.49)
+```
+ARGUMENTOS DE UNA FUNCION
+
+ARGUMENTOS POR VALOR
+
+
+FAMILIA APPLY: es usada para aplicar una función a cada elemento de una estructura de datos. En particular, es usada para aplicar funciones en matrices, data frames, arrays y listas. Este tipo de funciones no solo acepta datos como argumentos sino que tambien funciones. 
+
+LAPPLY(): Es un caso especial de la funcion apply(). Está diseñada para aplicar funciones a todos los elementos de una lista. Esta función devuelve un lista siempre. 
+
+La estructura de una función lapply es lapply(listo u objeto, función). 
+
+```{r}
+#Ejemplos de la función lapply
+mi_vector = 2:6
+mi_vector
+
+lapply(mi_vector, sqrt)
+```
+lapply se puede utilizar como sustituto al ciclo for, en el ejemplo anterior se pude observar esa propiedad. 
+```{r}
+mi_vector <- 2:6
+resultado <- NULL
+posicion <- 1
+
+for(numero in mi_vector) {
+  resultado[posicion] <- sqrt(numero)
+  posicion <- posicion + 1
+}
+
+resultado
+```
+
+```{r}
+#Ejemplo 2
+lapply(trees,mean)
+```
+
+
+SAPPLY, es una version simplificada de lapply, ya que esta funcion analiza la salida los productos finales de ella misma de tal manera que si puede representar la salida de manera mas simple lo hara. 
+
+```{r}
+sapply(airquality[, 1:4], mean, na.rm = TRUE)
+#Los resultados obtenidos de sapply sobre el dataframe airquality son valores vectorizados. 
+```
+```{r}
+sapply(mi_vector, sqrt)
+```
+
+VAPPLY: Devuelve un vector con la longitud que tiene cada una de las listas introducidas como parámetro.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
