@@ -104,4 +104,146 @@ if(number <10){
 }
 print(result)
 ```
+Loops
+While Cycle
+```{r}
+speed = 100
+while (speed >30) {
+  print(paste("Your speed is",speed))
+  
+  if(speed > 80){
+    break
+  }
+  
+  if(speed >48){
+    print("Slow dowm big time!")
+    speed = speed - 9
+  } else{
+    print("Slow dowm!")
+    speed = speed - 6
+  }  
+}
+speed
+```
+
+FOR
+
+```{r}
+lindkedin = c(16,913,5,2,17,14)
+
+for (l in lindkedin) {
+  print(l)
+}
+
+for(i in 1:length(lindkedin)){
+  print(lindkedin[i])
+}
+```
+
+Loop over a list
+
+```{r}
+nyc = list(pop=8405837, boroughs = c("Manhattan", "Brooklyn", "Queens", "Staten Island"), capital = FALSE)
+for (n in nyc){
+  print(n)
+}
+
+for(i in 1:length(nyc)){
+  if(i==2){
+    for(j in 1:length(nyc[[i]])){
+      print(nyc[[i]][j])
+    }
+  }
+  else {
+    print(nyc[[i]])
+  }
+}
+
+```
+Loop over matrix
+```{r}
+views = matrix(c(lindkedin, facebook), nrow = 2, byrow = TRUE)
+views
+
+for(row in 1:nrow(views)){
+  for(col in 1:ncol(views)){
+    print(paste("On row", row, "and column", col, "contains", views[row,col]))
+  }
+  
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

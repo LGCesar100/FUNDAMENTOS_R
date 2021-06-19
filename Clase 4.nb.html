@@ -227,342 +227,141 @@ pre code {
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
-<p>Intermediate R</p>
+<p>FUNCTIONS</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMyA9PSAoMiArIDEpXG5gYGAifQ== -->
-<pre class="r"><code>3 == (2 + 1)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJpbnRlcm1lZGlhdGVcIiAhPSBcInJcIlxuYGBgIn0= -->
-<pre class="r"><code>&quot;intermediate&quot; != &quot;r&quot;</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVFJVRSAhPSBGQUxTRVxuYGBgIn0= -->
-<pre class="r"><code>TRUE != FALSE</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJSY2hpdGVjdFwiICE9IFwicmNoaXRlY3RcIlxuYGBgIn0= -->
-<pre class="r"><code>&quot;Rchitect&quot; != &quot;rchitect&quot;</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Greater and less than</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLTYqMzArMiA+PSAtOVxuYGBgIn0= -->
-<pre class="r"><code>-6*30+2 &gt;= -9</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
-<pre><code>[1] FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJyYWluaW5nXCIgPD0gXCJ0YWJsZVwiXG5gYGAifQ== -->
-<pre class="r"><code>&quot;raining&quot; &lt;= &quot;table&quot;</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVFJVRSA+IEZBTFNFXG5gYGAifQ== -->
-<pre class="r"><code>TRUE &gt; FALSE</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
-<pre><code>[1] TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Compare vectors</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGluZGtlZGluID0gYygxNiw5LDEzLDUsMiwxNywxNClcbmZhY2Vib29rID0gYygxNyw3LDUsMjMsNCwzNCwzKVxuXG5saW5ka2VkaW4gPiAyMFxuYGBgIn0= -->
-<pre class="r"><code>lindkedin = c(16,9,13,5,2,17,14)
-facebook = c(17,7,5,23,4,34,3)
-
-lindkedin &gt; 20</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFXG4ifQ== -->
-<pre><code>[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmFjZWJvb2sgPD0xMFxuYGBgIn0= -->
-<pre class="r"><code>facebook &lt;=10</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFICBUUlVFIEZBTFNFICBUUlVFIEZBTFNFICBUUlVFXG4ifQ== -->
-<pre><code>[1] FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGluZGtlZGluID4gZmFjZWJvb2sgI2NvbXBhcmEgY2FkYSBlbGVtZW50byBkZSBsaW5rZWRpbiBjb24gbG9zIGRlIGZhY2Vrb29rIFxuYGBgIn0= -->
-<pre class="r"><code>lindkedin &gt; facebook #compara cada elemento de linkedin con los de facekook </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFICBUUlVFIEZBTFNFIEZBTFNFIEZBTFNFICBUUlVFXG4ifQ== -->
-<pre><code>[1] FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPSBtYXRyaXgoYyhsaW5ka2VkaW4sZmFjZWJvb2spLCBucm93PTIsIGJ5cm93ID0gVFJVRSlcbnZpZXdzXG5gYGAifQ== -->
-<pre class="r"><code>views = matrix(c(lindkedin,facebook), nrow=2, byrow = TRUE)
-views</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV0gWyw2XSBbLDddXG5bMSxdICAgMTYgICAgOSAgIDEzICAgIDUgICAgMiAgIDE3ICAgMTRcblsyLF0gICAxNyAgICA3ICAgIDUgICAyMyAgICA0ICAgMzQgICAgM1xuIn0= -->
-<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-[1,]   16    9   13    5    2   17   14
-[2,]   17    7    5   23    4   34    3</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPT0gMTNcbmBgYCJ9 -->
-<pre class="r"><code>views == 13</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSAgWywyXSAgWywzXSAgWyw0XSAgWyw1XSAgWyw2XSAgWyw3XVxuWzEsXSBGQUxTRSBGQUxTRSAgVFJVRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRVxuWzIsXSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRVxuIn0= -->
-<pre><code>      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
-[1,] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
-[2,] FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPD0gMTRcbmBgYCJ9 -->
-<pre class="r"><code>views &lt;= 14</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSBbLDJdIFssM10gIFssNF0gWyw1XSAgWyw2XSBbLDddXG5bMSxdIEZBTFNFIFRSVUUgVFJVRSAgVFJVRSBUUlVFIEZBTFNFIFRSVUVcblsyLF0gRkFMU0UgVFJVRSBUUlVFIEZBTFNFIFRSVUUgRkFMU0UgVFJVRVxuIn0= -->
-<pre><code>      [,1] [,2] [,3]  [,4] [,5]  [,6] [,7]
-[1,] FALSE TRUE TRUE  TRUE TRUE FALSE TRUE
-[2,] FALSE TRUE TRUE FALSE TRUE FALSE TRUE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Operators logicals</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGluZGtlZGluIDw9MTAgICYgZmFjZWJvb2sgPT0xNFxuYGBgIn0= -->
-<pre class="r"><code>lindkedin &lt;=10  &amp; facebook ==14</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFXG4ifQ== -->
-<pre><code>[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPiAxMSAmdmlld3MgPD0xNFxuYGBgIn0= -->
-<pre class="r"><code>views &gt; 11 &amp;views &lt;=14</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSAgWywyXSAgWywzXSAgWyw0XSAgWyw1XSAgWyw2XSAgWyw3XVxuWzEsXSBGQUxTRSBGQUxTRSAgVFJVRSBGQUxTRSBGQUxTRSBGQUxTRSAgVFJVRVxuWzIsXSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRSBGQUxTRVxuIn0= -->
-<pre><code>      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
-[1,] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE
-[2,] FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>The if statement</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVkaXVtID0gXCJsaW5rZWRpblwiXG5udW1fdmlld3MgPSAxNCBcblxuaWYobWVkaXVtID09IFwibGlua2VkaW5cIil7XG4gIHByaW50KFwiU29uIGlndWFsZXNcIilcbn0gZWxzZXtcbiAgcHJpbnQoXCJObyBzb24gaWd1YWxlc1wiKVxufSBcbmBgYCJ9 -->
-<pre class="r"><code>medium = &quot;linkedin&quot;
-num_views = 14 
-
-if(medium == &quot;linkedin&quot;){
-  print(&quot;Son iguales&quot;)
-} else{
-  print(&quot;No son iguales&quot;)
-} </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU29uIGlndWFsZXNcIlxuIn0= -->
-<pre><code>[1] &quot;Son iguales&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYobnVtX3ZpZXdzID4xNSl7XG4gIHByaW50KFwiWW91J3JlIHBvcHVsYXIhXCIpXG59IGVsc2Uge1xuICBwcmludChcIlRyeSB0byBiZSBtb3JlIHZpc2libGUhXCIpXG59XG5gYGAifQ== -->
-<pre class="r"><code>if(num_views &gt;15){
-  print(&quot;You&#39;re popular!&quot;)
-} else {
-  print(&quot;Try to be more visible!&quot;)
-}</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZSFcIlxuIn0= -->
-<pre><code>[1] &quot;Try to be more visible!&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Customize further: else if</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYobWVkaXVtID09IFwibGlua2VkaW5cIil7XG4gIHByaW50KFwiU29uIGlndWFsZXNcIilcbn0gZWxzZWlmKG1lZGl1bSA9IFwiRmFjZWJvb2tcIil7XG4gIHByaW50KFwiRXMgaWd1YWwgYSBGYWNlYm9va1wiKVxufVxuYGBgIn0= -->
-<pre class="r"><code>if(medium == &quot;linkedin&quot;){
-  print(&quot;Son iguales&quot;)
-} elseif(medium = &quot;Facebook&quot;){
-  print(&quot;Es igual a Facebook&quot;)
-}</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Else if 2.0</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVyID0gMTEwXG5yZXN1bHQgPSBcIlwiXG5cbmlmKG51bWJlciA8MTApe1xuICBpZihudW1iZXIgPCA1KXtcbiAgICByZXN1bHQgPSBcIlh0cmEgc21hbGxcIlxuICB9XG4gIGVsc2V7XG4gICAgcmVzdWx0ID0gXCJzbWFsbFwiXG4gIH1cbiAgXG59ZWxzZSBpZihudW1iZXIgPDEwMCkge1xuICByZXN1bHQgPSBcIk1lZGl1bVwiXG59IGVsc2Uge1xuICByZXN1bHQgPSBcIkxhcmdlXCJcbn1cbnByaW50KHJlc3VsdClcbmBgYCJ9 -->
-<pre class="r"><code>number = 110
-result = &quot;&quot;
-
-if(number &lt;10){
-  if(number &lt; 5){
-    result = &quot;Xtra small&quot;
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG93X3R3byA9IGZ1bmN0aW9uKHgsIHByaW50X2luZm8gPSBUUlVFKXtcbiAgeSA9IHheMlxuICBpZihwcmludF9pbmZvKXtcbiAgICBwcmludChwYXN0ZSh4LFwidG8gdGhlIHBvd2VyIHR3byBlcXVhbHNcIiwgeSkpXG4gIH1cbiAgcmV0dXJuKHkpXG4gIFxufVxucmVzdWx0ID0gcG93X3R3bygzKVxuYGBgIn0= -->
+<pre class="r"><code>pow_two = function(x, print_info = TRUE){
+  y = x^2
+  if(print_info){
+    print(paste(x,&quot;to the power two equals&quot;, y))
   }
-  else{
-    result = &quot;small&quot;
-  }
+  return(y)
   
-}else if(number &lt;100) {
-  result = &quot;Medium&quot;
-} else {
-  result = &quot;Large&quot;
 }
-print(result)</code></pre>
+result = pow_two(3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTGFyZ2VcIlxuIn0= -->
-<pre><code>[1] &quot;Large&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMyB0byB0aGUgcG93ZXIgdHdvIGVxdWFscyA5XCJcbiJ9 -->
+<pre><code>[1] &quot;3 to the power two equals 9&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzdWx0XG5gYGAifQ== -->
+<pre class="r"><code>result</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDlcbiJ9 -->
+<pre><code>[1] 9</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Loops While Cycle</p>
+<p>Function scoping</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BlZWQgPSAxMDBcbndoaWxlIChzcGVlZCA+MzApIHtcbiAgcHJpbnQocGFzdGUoXCJZb3VyIHNwZWVkIGlzXCIsc3BlZWQpKVxuICBcbiAgaWYoc3BlZWQgPiA4MCl7XG4gICAgYnJlYWtcbiAgfVxuICBcbiAgaWYoc3BlZWQgPjQ4KXtcbiAgICBwcmludChcIlNsb3cgZG93bSBiaWcgdGltZSFcIilcbiAgICBzcGVlZCA9IHNwZWVkIC0gOVxuICB9IGVsc2V7XG4gICAgcHJpbnQoXCJTbG93IGRvd20hXCIpXG4gICAgc3BlZWQgPSBzcGVlZCAtIDZcbiAgfSAgXG59XG5gYGAifQ== -->
-<pre class="r"><code>speed = 100
-while (speed &gt;30) {
-  print(paste(&quot;Your speed is&quot;,speed))
-  
-  if(speed &gt; 80){
-    break
-  }
-  
-  if(speed &gt;48){
-    print(&quot;Slow dowm big time!&quot;)
-    speed = speed - 9
-  } else{
-    print(&quot;Slow dowm!&quot;)
-    speed = speed - 6
-  }  
-}</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiWW91ciBzcGVlZCBpcyAxMDBcIlxuIn0= -->
-<pre><code>[1] &quot;Your speed is 100&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BlZWRcbmBgYCJ9 -->
-<pre class="r"><code>speed</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEwMFxuIn0= -->
-<pre><code>[1] 100</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>FOR</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGluZGtlZGluID0gYygxNiw5MTMsNSwyLDE3LDE0KVxuXG5mb3IgKGwgaW4gbGluZGtlZGluKSB7XG4gIHByaW50KGwpXG59XG5gYGAifQ== -->
-<pre class="r"><code>lindkedin = c(16,913,5,2,17,14)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG93X3R3byA9IGZ1bmN0aW9uKHgpe1xuICB5ID0geF4yXG4gIHJldHVybih5KSBcbn1cblxucG93X3R3byg0KVxuYGBgIn0= -->
+<pre class="r"><code>pow_two = function(x){
+  y = x^2
+  return(y) 
+}
 
-for (l in lindkedin) {
-  print(l)
-}</code></pre>
+pow_two(4)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE2XG5bMV0gOTEzXG5bMV0gNVxuWzFdIDJcblsxXSAxN1xuWzFdIDE0XG4ifQ== -->
-<pre><code>[1] 16
-[1] 913
-[1] 5
-[1] 2
-[1] 17
-[1] 14</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE2XG4ifQ== -->
+<pre><code>[1] 16</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gMTpsZW5ndGgobGluZGtlZGluKSl7XG4gIHByaW50KGxpbmRrZWRpbltpXSlcbn1cbmBgYCJ9 -->
-<pre class="r"><code>for(i in 1:length(lindkedin)){
-  print(lindkedin[i])
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueFxuYGBgIn0= -->
+<pre class="r"><code>x</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE2XG5bMV0gOTEzXG5bMV0gNVxuWzFdIDJcblsxXSAxN1xuWzFdIDE0XG4ifQ== -->
-<pre><code>[1] 16
-[1] 913
-[1] 5
-[1] 2
-[1] 17
-[1] 14</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IG9iamV0byAneCcgbm8gZW5jb250cmFkb1xuIn0= -->
+<pre><code>Error: objeto &#39;x&#39; no encontrado</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Loop over a list</p>
+<p>R passe arguments by value</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnljID0gbGlzdChwb3A9ODQwNTgzNywgYm9yb3VnaHMgPSBjKFwiTWFuaGF0dGFuXCIsIFwiQnJvb2tseW5cIiwgXCJRdWVlbnNcIiwgXCJTdGF0ZW4gSXNsYW5kXCIpLCBjYXBpdGFsID0gRkFMU0UpXG5mb3IgKG4gaW4gbnljKXtcbiAgcHJpbnQobilcbn1cbmBgYCJ9 -->
-<pre class="r"><code>nyc = list(pop=8405837, boroughs = c(&quot;Manhattan&quot;, &quot;Brooklyn&quot;, &quot;Queens&quot;, &quot;Staten Island&quot;), capital = FALSE)
-for (n in nyc){
-  print(n)
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHJpcGxlID0gZnVuY3Rpb24oeCl7XG4gIHggPSAzKnhcbiAgeFxufVxuYT0tNVxudHJpcGxlKGEpXG5gYGAifQ== -->
+<pre class="r"><code>triple = function(x){
+  x = 3*x
+  x
+}
+a=-5
+triple(a)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDg0MDU4MzdcblsxXSBcIk1hbmhhdHRhblwiICAgICBcIkJyb29rbHluXCIgICAgICBcIlF1ZWVuc1wiICAgICAgICBcIlN0YXRlbiBJc2xhbmRcIlxuWzFdIEZBTFNFXG4ifQ== -->
-<pre><code>[1] 8405837
-[1] &quot;Manhattan&quot;     &quot;Brooklyn&quot;      &quot;Queens&quot;        &quot;Staten Island&quot;
-[1] FALSE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0xNVxuIn0= -->
+<pre><code>[1] -15</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gMTpsZW5ndGgobnljKSl7XG4gIGlmKGk9PTIpe1xuICAgIGZvcihqIGluIDE6bGVuZ3RoKG55Y1tbaV1dKSl7XG4gICAgICBwcmludChueWNbW2ldXVtqXSlcbiAgICB9XG4gIH1cbiAgZWxzZSB7XG4gICAgcHJpbnQobnljW1tpXV0pXG4gIH1cbn1cbmBgYCJ9 -->
-<pre class="r"><code>for(i in 1:length(nyc)){
-  if(i==2){
-    for(j in 1:length(nyc[[i]])){
-      print(nyc[[i]][j])
-    }
-  }
-  else {
-    print(nyc[[i]])
-  }
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVxuYGBgIn0= -->
+<pre class="r"><code>a</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDg0MDU4MzdcblsxXSBcIk1hbmhhdHRhblwiXG5bMV0gXCJCcm9va2x5blwiXG5bMV0gXCJRdWVlbnNcIlxuWzFdIFwiU3RhdGVuIElzbGFuZFwiXG5bMV0gRkFMU0VcbiJ9 -->
-<pre><code>[1] 8405837
-[1] &quot;Manhattan&quot;
-[1] &quot;Brooklyn&quot;
-[1] &quot;Queens&quot;
-[1] &quot;Staten Island&quot;
-[1] FALSE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC01XG4ifQ== -->
+<pre><code>[1] -5</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Loop over matrix</p>
+<p>Others type of parameters</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPSBtYXRyaXgoYyhsaW5ka2VkaW4sIGZhY2Vib29rKSwgbnJvdyA9IDIsIGJ5cm93ID0gVFJVRSlcbmBgYCJ9 -->
-<pre class="r"><code>views = matrix(c(lindkedin, facebook), nrow = 2, byrow = TRUE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoibGEgbG9uZ2l0dWQgZGUgbG9zIGRhdG9zIFsxM10gbm8gZXMgdW4gc3VibeaYvOO5oWx0aXBsbyBvIG3mmLzjuaFsdGlwbG8gZGVsIG7mmLzjuaFtZXJvIGRlIGZpbGFzIFsyXSBlbiBsYSBtYXRyaXpcbiJ9 -->
-<pre><code>la longitud de los datos [13] no es un subm昼㹡ltiplo o m昼㹡ltiplo del n昼㹡mero de filas [2] en la matriz</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3NcbmBgYCJ9 -->
-<pre class="r"><code>views</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV0gWyw2XSBbLDddXG5bMSxdICAgMTYgIDkxMyAgICA1ICAgIDIgICAxNyAgIDE0ICAgMTdcblsyLF0gICAgNyAgICA1ICAgMjMgICAgNCAgIDM0ICAgIDMgICAxNlxuIn0= -->
-<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-[1,]   16  913    5    2   17   14   17
-[2,]    7    5   23    4   34    3   16</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKHJvdyBpbiAxOm5yb3codmlld3MpKXtcbiAgZm9yKGNvbCBpbiAxOm5jb2wodmlld3MpKXtcbiAgICBwcmludChwYXN0ZShcIk9uIHJvd1wiLCByb3csIFwiYW5kIGNvbHVtblwiLCBjb2wsIFwiY29udGFpbnNcIiwgdmlld3Nbcm93LGNvbF0pKVxuICB9XG4gIFxufVxuYGBgIn0= -->
-<pre class="r"><code>for(row in 1:nrow(views)){
-  for(col in 1:ncol(views)){
-    print(paste(&quot;On row&quot;, row, &quot;and column&quot;, col, &quot;contains&quot;, views[row,col]))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGluZGtlZGluID0gYygxNiwxMyw1LDIsMTcsMTQpXG5pbnRlcnByZXQgPSBmdW5jdGlvbihudW1fdmlld3Mpe1xuICBpZihudW1fdmlld3MgPjE1KXtcbiAgICBwcmludChcIllvdSdyZSBwb3B1bGFyIVwiKVxuICAgIHJldHVybihudW1fdmlld3MpXG4gIH1lbHNle1xuICBwcmludChcIlRyeSB0byBiZSBtb3JlIHZpc2libGVcIilcbiAgcmV0dXJuKDApXG4gIH1cbn1cbmludGVycHJldChsaW5ka2VkaW5bMV0pXG5gYGAifQ== -->
+<pre class="r"><code>lindkedin = c(16,13,5,2,17,14)
+interpret = function(num_views){
+  if(num_views &gt;15){
+    print(&quot;You&#39;re popular!&quot;)
+    return(num_views)
+  }else{
+  print(&quot;Try to be more visible&quot;)
+  return(0)
   }
-  
-}</code></pre>
+}
+interpret(lindkedin[1])</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiT24gcm93IDEgYW5kIGNvbHVtbiAxIGNvbnRhaW5zIDE2XCJcblsxXSBcIk9uIHJvdyAxIGFuZCBjb2x1bW4gMiBjb250YWlucyA5MTNcIlxuWzFdIFwiT24gcm93IDEgYW5kIGNvbHVtbiAzIGNvbnRhaW5zIDVcIlxuWzFdIFwiT24gcm93IDEgYW5kIGNvbHVtbiA0IGNvbnRhaW5zIDJcIlxuWzFdIFwiT24gcm93IDEgYW5kIGNvbHVtbiA1IGNvbnRhaW5zIDE3XCJcblsxXSBcIk9uIHJvdyAxIGFuZCBjb2x1bW4gNiBjb250YWlucyAxNFwiXG5bMV0gXCJPbiByb3cgMSBhbmQgY29sdW1uIDcgY29udGFpbnMgMTdcIlxuWzFdIFwiT24gcm93IDIgYW5kIGNvbHVtbiAxIGNvbnRhaW5zIDdcIlxuWzFdIFwiT24gcm93IDIgYW5kIGNvbHVtbiAyIGNvbnRhaW5zIDVcIlxuWzFdIFwiT24gcm93IDIgYW5kIGNvbHVtbiAzIGNvbnRhaW5zIDIzXCJcblsxXSBcIk9uIHJvdyAyIGFuZCBjb2x1bW4gNCBjb250YWlucyA0XCJcblsxXSBcIk9uIHJvdyAyIGFuZCBjb2x1bW4gNSBjb250YWlucyAzNFwiXG5bMV0gXCJPbiByb3cgMiBhbmQgY29sdW1uIDYgY29udGFpbnMgM1wiXG5bMV0gXCJPbiByb3cgMiBhbmQgY29sdW1uIDcgY29udGFpbnMgMTZcIlxuIn0= -->
-<pre><code>[1] &quot;On row 1 and column 1 contains 16&quot;
-[1] &quot;On row 1 and column 2 contains 913&quot;
-[1] &quot;On row 1 and column 3 contains 5&quot;
-[1] &quot;On row 1 and column 4 contains 2&quot;
-[1] &quot;On row 1 and column 5 contains 17&quot;
-[1] &quot;On row 1 and column 6 contains 14&quot;
-[1] &quot;On row 1 and column 7 contains 17&quot;
-[1] &quot;On row 2 and column 1 contains 7&quot;
-[1] &quot;On row 2 and column 2 contains 5&quot;
-[1] &quot;On row 2 and column 3 contains 23&quot;
-[1] &quot;On row 2 and column 4 contains 4&quot;
-[1] &quot;On row 2 and column 5 contains 34&quot;
-[1] &quot;On row 2 and column 6 contains 3&quot;
-[1] &quot;On row 2 and column 7 contains 16&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiWW91J3JlIHBvcHVsYXIhXCJcblsxXSAxNlxuIn0= -->
+<pre><code>[1] &quot;You&#39;re popular!&quot;
+[1] 16</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW50ZXByZXRfYWxsID0gZnVuY3Rpb24odmlld3MsIHJldHVybl9zdW0gPSBUUlVFKXtcbiAgY291bnQgID0gMCBcbiAgZm9yKHYgaW4gdmlld3Mpe1xuICAgIGNvdW50ID0gY291bnQraW50ZXJwcmV0KHYpXG4gIH1cbiAgaWYocmV0dXJuX3N1bSl7XG4gICAgcmV0dXJuKGNvdW50KVxuICB9ZWxzZXtcbiAgICByZXR1cm4oTlVMTClcbiAgfVxufVxuaW50ZXByZXRfYWxsKGxpbmRrZWRpbilcbmBgYCJ9 -->
+<pre class="r"><code>intepret_all = function(views, return_sum = TRUE){
+  count  = 0 
+  for(v in views){
+    count = count+interpret(v)
+  }
+  if(return_sum){
+    return(count)
+  }else{
+    return(NULL)
+  }
+}
+intepret_all(lindkedin)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiWW91J3JlIHBvcHVsYXIhXCJcblsxXSBcIlRyeSB0byBiZSBtb3JlIHZpc2libGVcIlxuWzFdIFwiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZVwiXG5bMV0gXCJUcnkgdG8gYmUgbW9yZSB2aXNpYmxlXCJcblsxXSBcIllvdSdyZSBwb3B1bGFyIVwiXG5bMV0gXCJUcnkgdG8gYmUgbW9yZSB2aXNpYmxlXCJcblsxXSAzM1xuIn0= -->
+<pre><code>[1] &quot;You&#39;re popular!&quot;
+[1] &quot;Try to be more visible&quot;
+[1] &quot;Try to be more visible&quot;
+[1] &quot;Try to be more visible&quot;
+[1] &quot;You&#39;re popular!&quot;
+[1] &quot;Try to be more visible&quot;
+[1] 33</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Load and R package</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxuXG5xcGxvdChtdGNhcnMkd3QsIG10Y2FycyRocClcbmBgYCJ9 -->
+<pre class="r"><code>library(ggplot2)
+
+qplot(mtcars$wt, mtcars$hp)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-plot-begin eyJoZWlnaHQiOjQzMi42MzI5LCJ3aWR0aCI6NzAwLCJzaXplX2JlaGF2aW9yIjowLCJjb25kaXRpb25zIjpbXX0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Use apoly in R</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0KDQoNCkludGVybWVkaWF0ZSBSDQpgYGB7cn0NCjMgPT0gKDIgKyAxKQ0KImludGVybWVkaWF0ZSIgIT0gInIiDQpUUlVFICE9IEZBTFNFDQoiUmNoaXRlY3QiICE9ICJyY2hpdGVjdCINCg0KYGBgDQpHcmVhdGVyIGFuZCBsZXNzIHRoYW4NCmBgYHtyfQ0KLTYqMzArMiA+PSAtOQ0KInJhaW5pbmciIDw9ICJ0YWJsZSINCg0KVFJVRSA+IEZBTFNFDQpgYGANCkNvbXBhcmUgdmVjdG9ycw0KDQpgYGB7cn0NCmxpbmRrZWRpbiA9IGMoMTYsOSwxMyw1LDIsMTcsMTQpDQpmYWNlYm9vayA9IGMoMTcsNyw1LDIzLDQsMzQsMykNCg0KbGluZGtlZGluID4gMjANCmZhY2Vib29rIDw9MTANCmxpbmRrZWRpbiA+IGZhY2Vib29rICNjb21wYXJhIGNhZGEgZWxlbWVudG8gZGUgbGlua2VkaW4gY29uIGxvcyBkZSBmYWNla29vayANCg0Kdmlld3MgPSBtYXRyaXgoYyhsaW5ka2VkaW4sZmFjZWJvb2spLCBucm93PTIsIGJ5cm93ID0gVFJVRSkNCnZpZXdzDQoNCnZpZXdzID09IDEzDQp2aWV3cyA8PSAxNA0KYGBgDQpPcGVyYXRvcnMgbG9naWNhbHMNCmBgYHtyfQ0KbGluZGtlZGluIDw9MTAgICYgZmFjZWJvb2sgPT0xNA0Kdmlld3MgPiAxMSAmdmlld3MgPD0xNA0KYGBgDQoNClRoZSBpZiBzdGF0ZW1lbnQgDQoNCmBgYHtyfQ0KbWVkaXVtID0gImxpbmtlZGluIg0KbnVtX3ZpZXdzID0gMTQgDQoNCmlmKG1lZGl1bSA9PSAibGlua2VkaW4iKXsNCiAgcHJpbnQoIlNvbiBpZ3VhbGVzIikNCn0gZWxzZXsNCiAgcHJpbnQoIk5vIHNvbiBpZ3VhbGVzIikNCn0gDQoNCmlmKG51bV92aWV3cyA+MTUpew0KICBwcmludCgiWW91J3JlIHBvcHVsYXIhIikNCn0gZWxzZSB7DQogIHByaW50KCJUcnkgdG8gYmUgbW9yZSB2aXNpYmxlISIpDQp9DQpgYGANCg0KQ3VzdG9taXplIGZ1cnRoZXI6IGVsc2UgaWYNCg0KYGBge3J9DQppZihtZWRpdW0gPT0gImxpbmtlZGluIil7DQogIHByaW50KCJTb24gaWd1YWxlcyIpDQp9IGVsc2VpZihtZWRpdW0gPSAiRmFjZWJvb2siKXsNCiAgcHJpbnQoIkVzIGlndWFsIGEgRmFjZWJvb2siKQ0KfQ0KYGBgDQpFbHNlIGlmIDIuMA0KDQpgYGB7cn0NCm51bWJlciA9IDExMA0KcmVzdWx0ID0gIiINCg0KaWYobnVtYmVyIDwxMCl7DQogIGlmKG51bWJlciA8IDUpew0KICAgIHJlc3VsdCA9ICJYdHJhIHNtYWxsIg0KICB9DQogIGVsc2V7DQogICAgcmVzdWx0ID0gInNtYWxsIg0KICB9DQogIA0KfWVsc2UgaWYobnVtYmVyIDwxMDApIHsNCiAgcmVzdWx0ID0gIk1lZGl1bSINCn0gZWxzZSB7DQogIHJlc3VsdCA9ICJMYXJnZSINCn0NCnByaW50KHJlc3VsdCkNCmBgYA0KTG9vcHMNCldoaWxlIEN5Y2xlDQpgYGB7cn0NCnNwZWVkID0gMTAwDQp3aGlsZSAoc3BlZWQgPjMwKSB7DQogIHByaW50KHBhc3RlKCJZb3VyIHNwZWVkIGlzIixzcGVlZCkpDQogIA0KICBpZihzcGVlZCA+IDgwKXsNCiAgICBicmVhaw0KICB9DQogIA0KICBpZihzcGVlZCA+NDgpew0KICAgIHByaW50KCJTbG93IGRvd20gYmlnIHRpbWUhIikNCiAgICBzcGVlZCA9IHNwZWVkIC0gOQ0KICB9IGVsc2V7DQogICAgcHJpbnQoIlNsb3cgZG93bSEiKQ0KICAgIHNwZWVkID0gc3BlZWQgLSA2DQogIH0gIA0KfQ0Kc3BlZWQNCmBgYA0KDQpGT1INCg0KYGBge3J9DQpsaW5ka2VkaW4gPSBjKDE2LDkxMyw1LDIsMTcsMTQpDQoNCmZvciAobCBpbiBsaW5ka2VkaW4pIHsNCiAgcHJpbnQobCkNCn0NCg0KZm9yKGkgaW4gMTpsZW5ndGgobGluZGtlZGluKSl7DQogIHByaW50KGxpbmRrZWRpbltpXSkNCn0NCmBgYA0KDQpMb29wIG92ZXIgYSBsaXN0DQoNCmBgYHtyfQ0KbnljID0gbGlzdChwb3A9ODQwNTgzNywgYm9yb3VnaHMgPSBjKCJNYW5oYXR0YW4iLCAiQnJvb2tseW4iLCAiUXVlZW5zIiwgIlN0YXRlbiBJc2xhbmQiKSwgY2FwaXRhbCA9IEZBTFNFKQ0KZm9yIChuIGluIG55Yyl7DQogIHByaW50KG4pDQp9DQoNCmZvcihpIGluIDE6bGVuZ3RoKG55Yykpew0KICBpZihpPT0yKXsNCiAgICBmb3IoaiBpbiAxOmxlbmd0aChueWNbW2ldXSkpew0KICAgICAgcHJpbnQobnljW1tpXV1bal0pDQogICAgfQ0KICB9DQogIGVsc2Ugew0KICAgIHByaW50KG55Y1tbaV1dKQ0KICB9DQp9DQoNCmBgYA0KTG9vcCBvdmVyIG1hdHJpeA0KYGBge3J9DQp2aWV3cyA9IG1hdHJpeChjKGxpbmRrZWRpbiwgZmFjZWJvb2spLCBucm93ID0gMiwgYnlyb3cgPSBUUlVFKQ0Kdmlld3MNCg0KZm9yKHJvdyBpbiAxOm5yb3codmlld3MpKXsNCiAgZm9yKGNvbCBpbiAxOm5jb2wodmlld3MpKXsNCiAgICBwcmludChwYXN0ZSgiT24gcm93Iiwgcm93LCAiYW5kIGNvbHVtbiIsIGNvbCwgImNvbnRhaW5zIiwgdmlld3Nbcm93LGNvbF0pKQ0KICB9DQogIA0KfQ0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0KDQpGVU5DVElPTlMNCmBgYHtyfQ0KcG93X3R3byA9IGZ1bmN0aW9uKHgsIHByaW50X2luZm8gPSBUUlVFKXsNCiAgeSA9IHheMg0KICBpZihwcmludF9pbmZvKXsNCiAgICBwcmludChwYXN0ZSh4LCJ0byB0aGUgcG93ZXIgdHdvIGVxdWFscyIsIHkpKQ0KICB9DQogIHJldHVybih5KQ0KICANCn0NCnJlc3VsdCA9IHBvd190d28oMykNCnJlc3VsdA0KYGBgDQoNCkZ1bmN0aW9uIHNjb3BpbmcNCmBgYHtyfQ0KcG93X3R3byA9IGZ1bmN0aW9uKHgpew0KICB5ID0geF4yDQogIHJldHVybih5KSANCn0NCnBvd190d28oNCkNCmBgYA0KUiBwYXNzZSBhcmd1bWVudHMgYnkgdmFsdWUNCmBgYHtyfQ0KdHJpcGxlID0gZnVuY3Rpb24oeCl7DQogIHggPSAzKngNCiAgeA0KfQ0KYT0tNQ0KdHJpcGxlKGEpDQphDQpgYGANCk90aGVycyB0eXBlIG9mIHBhcmFtZXRlcnMNCg0KYGBge3J9DQpsaW5ka2VkaW4gPSBjKDE2LDEzLDUsMiwxNywxNCkNCmludGVycHJldCA9IGZ1bmN0aW9uKG51bV92aWV3cyl7DQogIGlmKG51bV92aWV3cyA+MTUpew0KICAgIHByaW50KCJZb3UncmUgcG9wdWxhciEiKQ0KICAgIHJldHVybihudW1fdmlld3MpDQogIH1lbHNlew0KICBwcmludCgiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZSIpDQogIHJldHVybigwKQ0KICB9DQp9DQppbnRlcnByZXQobGluZGtlZGluWzFdKQ0KDQppbnRlcHJldF9hbGwgPSBmdW5jdGlvbih2aWV3cywgcmV0dXJuX3N1bSA9IFRSVUUpew0KICBjb3VudCAgPSAwIA0KICBmb3IodiBpbiB2aWV3cyl7DQogICAgY291bnQgPSBjb3VudCtpbnRlcnByZXQodikNCiAgfQ0KICBpZihyZXR1cm5fc3VtKXsNCiAgICByZXR1cm4oY291bnQpDQogIH1lbHNlew0KICAgIHJldHVybihOVUxMKQ0KICB9DQp9DQppbnRlcHJldF9hbGwobGluZGtlZGluKQ0KYGBgDQoNCg0KTG9hZCBhbmQgUiBwYWNrYWdlDQoNCmBgYHtyfQ0KbGlicmFyeShnZ3Bsb3QyKQ0KDQpxcGxvdChtdGNhcnMkd3QsIG10Y2FycyRocCkNCmBgYA0KDQpVc2UgYXBvbHkgaW4gUg0KDQoNCmBgYHtyfQ0KDQpgYGANCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
 
 
 
@@ -609,7 +408,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Clase 3.Rmd");
+  window.initializeSourceEmbed("Clase 4.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
