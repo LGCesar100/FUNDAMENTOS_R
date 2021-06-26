@@ -101,8 +101,36 @@ list = lapply(temp,select)
 list
 
 ```
+lapply and anonymous functions
+```{r}
+(function(x,y){3*x*y})(9,10)
 
+piooners = c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+split = strsplit(piooners, split = ":")
+split_low = lapply(split, tolower)
+#split
+#split_low
 
+names = lapply(split_low, function(x){x[1]})
+#names
+
+years = lapply(split_low, function(s){s[2]})
+years
+```
+
+use lapply with additional arguments
+```{r}
+select_el = function(x,index){
+  x[index]
+  
+}
+
+names = lapply(split_low, select_el,1)
+#names 
+
+years = lapply(split_low, select_el, 2)
+years 
+```
 
 
 
