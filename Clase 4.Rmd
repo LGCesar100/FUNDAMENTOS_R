@@ -131,12 +131,84 @@ names = lapply(split_low, select_el,1)
 years = lapply(split_low, select_el, 2)
 years 
 ```
+sapply 
 
+```{r}
+extremes = function(x){
+  c(min=min(x), max=max(x))
+}
 
+lapply(temp, extremes)
+sapply(temp, extremes)
 
+temp2 = list(1,2,3,4,5)
 
+func_temp2 = function(x){
+  x
+}
 
+sapply(temp2, func_temp2)
+```
+vapply
 
+```{r}
+basics = function(x){
+  c(min=min(x), mean=mean(x), max=max(x))
+}
+
+lapply(temp, basics)
+sapply(temp, basics)
+vapply(temp, basics, numeric(3))
+
+temp3 = c("Guatemala", "Salvador", "Honduras", "Nicaragua")
+
+unique_letters = function(name){
+  bane = gsub(" ","",name)
+  letters = strsplit(name, split="")[[1]]
+  unique(letters)
+  
+}
+
+lapply(temp3, unique_letters)
+sapply(temp3, unique_letters)
+#vapply(temp3, unique_letters, nchar(7)) No jala.
+
+```
+
+Utilities
+
+```{r}
+errors <- c(1.9, -2.6, 4.0, -9.5, -3.4, 7.3)
+
+print(sum(abs(errors)))
+#?round Ayuda de R
+
+linkedin <- list(16, 9, 13, 5, 2, 17, 14)
+facebook <- list(17, 7, 5, 16, 8, 13, 14)
+
+li_vec = unlist(linkedin)
+fb_vec = unlist(facebook)
+
+social_vec = append(li_vec, fb_vec)
+social_vec
+
+sort(social_vec, decreasin = TRUE)
+
+```
+grep & grepl
+
+```{r}
+emails = c("john.doe@ivyleague.edu", "education@world.gov", "dalai.lama@peace.org",
+            "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
+emails
+
+grepl(pattern = "edu", x=emails)
+
+hits = grep(pattern = "edu", x = emails)
+
+emails[hits]
+
+```
 
 
 

@@ -84,6 +84,7 @@ worldwide_vector
 all_wars_variable = cbind(stars_wars_matrix, worldwide_vector)
 all_wars_variable
 
+
 worldwide_cols = colSums(all_wars_variable)
 worldwide_cols
 
