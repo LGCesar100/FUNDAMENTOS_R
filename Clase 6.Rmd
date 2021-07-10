@@ -1,0 +1,138 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(gapminder)
+
+gapminder%>% 
+  summarize(medianLifeExp = median(lifeExp))
+
+gapminder%>%
+  filter(year == 1957)%>%
+  summarize(medianLifeExp = median(lifeExp))
+
+gapminder%>%
+  filter (year == 1957)%>%
+  summarize(medianLifeExp = median(lifeExp), max(gdpPercap))
+```
+
+```{r}
+gapminder%>%
+  filter (year == 1957)%>%
+  group_by(continent) %>%
+  summarize(medianLifeExp = median(lifeExp), max(gdpPercap)) 
+```
+
+```{r}
+gapminder%>% 
+  group_by(continent, year)%>%
+  summarize(medianLifeExp = median(lifeExp), max(gdpPercap))
+```
+
+
+```{r}
+by_year = gapminder %>%
+  group_by(year)%>%
+  summarize(medianLifeExp = median(lifeExp), max(gdpPercap))
+
+by_year
+
+ggplot(by_year)
+
+```
+
+
+
+```{r}
+by_year_continent = gapminder %>%
+  group_by(continent, year)%>%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+by_year_continent
+
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) + geom_point()
+```
+Types of visualizations 
+
+Lines plots 
+
+```{r}
+by_year_continent = gapminder %>%
+  group_by(continent, year)%>%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+by_year_continent
+
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) + geom_line()
+```
+
+Bar plots
+
+```{r}
+oceania_1952 = gapminder %>% 
+  filter(continent == "Oceania", year == 1952)
+
+oceania_1952
+
+ggplot(oceania_1952, aes(x=country, y=gdpPercap, fill=country)) + geom_col()
+```
+
+Histograms
+
+```{r}
+gapminder_1952 = gapminder%>%
+  filter(year ==1952 )%>% 
+  mutate(pop_by_mil = round(pop/1000000,2))
+
+gapminder_1952
+
+ggplot(gapminder_1952, aes(x= pop_by_mil)) +
+  geom_histogram(bins = 100) + 
+  scale_x_log10()
+```
+
+Boxes plots
+```{r}
+gapminder_1952 = gapminder%>%
+  filter(year ==1952 ) 
+
+ggplot(gapminder_1952, aes(x= continent, y= gdpPercap)) +
+  geom_boxplot()+ 
+  scale_y_log10()
+  
+```
+
+Data manipulation with dplyr
+
+
+```{r}
+counties = read.csv('counties.csv')
+counties%>%
+dplyr::select(state, county, population, men, women)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
