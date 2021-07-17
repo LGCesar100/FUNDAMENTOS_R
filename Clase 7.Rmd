@@ -1,0 +1,105 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+
+library(tidyverse)
+sets = read.csv("../FUNDAMENTOS_R/data-lego-20210717/sets.csv", header = TRUE, sep = ",", dec = ".")
+parts = read.csv("../FUNDAMENTOS_R/data-lego-20210717/parts.csv", header = TRUE, sep = ",", dec = ".")
+themes = read.csv("../FUNDAMENTOS_R/data-lego-20210717/themes.csv", header = TRUE, sep = ",", dec = ".")
+part_categories = read.csv("../FUNDAMENTOS_R/data-lego-20210717/part_categories.csv", header = TRUE, sep = ",", dec = ".")
+
+
+sets
+parts
+themes
+part_categories
+```
+
+```{r}
+counties = read.csv('counties.csv')
+counties
+
+counties%>%
+dplyr::select(state, county, population, professional:production)
+
+
+counties%>%
+  count(state)%>%
+  rename(num_counties = n)
+
+counties%>%
+dplyr::select(state, county, poverty_rate = poverty)
+
+```
+
+Using transmute
+
+```{r}
+counties%>%
+  transmute(state, county, population, density = population/land_area)%>%
+  filter(population > 1000000)%>%
+  arrange(density)
+```
+
+```{r}
+counties%>%
+  rename(unemployment_rate = unemployment)
+
+
+counties%>%
+dplyr::select(state, county, contains("poverty"))
+```
+```{r}
+counties%>%
+  mutate(fraction_women = women/population)
+
+counties%>%
+  transmute(state, county, employed_rate = employed/population)
+```
+
+Joining Data with dplyr
+
+```{r}
+sets%>% 
+  inner_join(themes, by=c("theme_id" = "id"))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

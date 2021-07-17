@@ -111,7 +111,15 @@ Data manipulation with dplyr
 ```{r}
 counties = read.csv('counties.csv')
 counties%>%
-dplyr::select(state, county, population, men, women)
+dplyr::select(state, county, population, men, women)%>%
+  mutate(proportion_men = men/population)%>%
+  filter(population > 10000)%>%
+  arrange(desc(proportion_men))
+```
+Count verb
+
+```{r}
+
 ```
 
 
