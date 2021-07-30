@@ -5,9 +5,9 @@ output: html_notebook
 
 ```{r}
 library(tidyverse)
-inventories <- read_csv("inventories.csv")
-inventory_parts <- read_csv("inventory_parts.csv")
-colors <- read_csv("colors.csv")
+inventories <- read.csv("../FUNDAMENTOS_R/data-lego-20210730/inventories.csv")
+inventory_parts <- read.csv("../FUNDAMENTOS_R/data-lego-20210730/inventory_parts.csv")
+colors <- read.csv("../FUNDAMENTOS_R/data-lego-20210730/colors.csv")
 inventories
 inventory_parts
 colors
